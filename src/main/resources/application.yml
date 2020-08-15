@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  logging:
+    config: classpath:logback-file.xml
+    level:
+      root: DEBUG
+  jetty:
+    accesslog:
+      enabled: true
+  customized-jetty:
+    accesslog:
+      enabled: false
+    ssl:
+      enabled: false
+    port: ${server.port}
